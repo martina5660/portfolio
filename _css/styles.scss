@@ -1,0 +1,411 @@
+// Google fonts -> OpenSans, Open Sans Condenced, Lato, Raleway, Arno & Crimmson Pro
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&family=Architects+Daughter&EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('../node_modules/bootstrap/scss/mixins/_breakpoints.scss');
+
+
+// Colors
+$very-lt-taupe: #FFFBE6;
+$lt-taupe: #FFF9DD;
+$med-taupe: #FFFBE6;
+$dark-taupe: #D2CDB2;
+$very-dark-taupe: #9B9887;
+
+
+$very-lt-violet: #F6E6FE;
+$lt-violet: #EDD9F8;
+$med-violet: #CDC0D4;
+$dark-violet: #85788C;
+$very-dark-violet: #635B68;
+
+
+$very-lt-gray: #E7EEFE;
+$lt-gray: #DBE4F8;
+$med-gray: #C1C7D4;
+$dark-gray: #797F8D;
+$very-dark-gray: #5C5F68;
+
+
+$very-lt-yell-green: #FAFDA9;
+$lt-yell-green: #CFD369;
+$med-yell-green: #b3bd64;
+$dark-yell-green: #7B7F15;
+$very-dark-yell-green: #515400;
+
+
+$very-lt-purple: #e0c9eb;
+$lt-purple: #794A8D;
+$med-purple: #5B2971;
+$dark-purple: #401155;
+$very-dark-purple: #280339;
+
+
+
+// Fonts
+$font-color-dark: #3B270C;
+$font-color-medium: #5B5B5B;
+$font-color-light: #f2f2f2;
+$font-color-white: #f9f9f9;
+$font-color-beige: #F5F5DC;
+$font-color-floralwhite: #fffaf0;
+$font-color-info: #280339;
+$font-color-pecan: #48260D;
+$font-color-caramel: #997950;
+$font-color-espresso: #4B382A;
+
+$font-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-roboto-slab: 'Roboto Slab', serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-open-sans-condenced: 'Open Sans Condensed', sans-serif;
+$font-lato: "Lato", sans-serif;
+$font-raleway: "Raleway", sans-serif;
+$font-arvo: "Arvo", serif;
+$font-crimson-pro: "Crimson Pro", serif;
+$font-architects-daught: 'Architects Daughter', cursive;
+$font-eb-garamond: 'EB Garamond', serif;
+$font-mulish: 'Mulish', sans-serif;
+$font-size: 20px;
+
+@mixin title-after(){
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 6.25rem;
+    opacity: 0.35;
+}
+
+
+// Heights
+$container-min-height: 15rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+html {
+    min-height: 100%;
+ }
+
+body {
+    z-index: 0;
+    font-size: $font-size;
+    background-color: $very-lt-taupe;
+    color: $font-color-floralwhite;
+    font-size:  $font-size;
+    font-family: $font-mulish;
+    font-weight: 300;
+
+    h1, h2, h3, h4, h5, h6 {
+        display: block;
+        position: relative;
+    }
+    h1 {
+        font-family: $font-eb-garamond;
+        font-size: $font-size*6.55;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+    h2 {
+        font-family: $font-mulish;
+        font-size: $font-size*4.1;
+    }
+    h3{
+        font-family: $font-eb-garamond;
+        font-size: $font-size*2.56;
+    }
+    h4{
+        font-family: $font-lato;
+        font-size: $font-size*1.6;
+    }
+    h5{
+        font-family: $font-eb-garamond;
+        font-size: $font-size*1;
+    }
+    p{
+        font-size: $font-size*1.125;
+        line-height: $font-size*1.6;
+        margin-bottom: $font-size*1.5;
+    }
+    a {
+        cursor: pointer;
+        color: inherit;
+    }
+}
+
+
+.jumbotron {
+    margin: 0px auto; 
+    border-radius: 0;
+}
+
+
+
+#header {
+    background-image: url('../_img/header-v2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: $container-min-height*2;
+    #name {
+        margin-top: 3rem;
+        //padding: 1rem 0rem;
+        font-family: $font-architects-daught;
+        font-weight: 700;
+        background-color: rgba(255, 251, 230, 0.75);
+        font-size: $font-size*5;
+        letter-spacing: .1em;
+        color: $font-color-pecan;
+    }
+    #job-title {
+        margin-top: 0rem;
+        font-family: $font-arvo;
+        background-color: $dark-yell-green;
+        font-size: $font-size*1.5;
+        line-height: $font-size*2.2;
+        color: $font-color-floralwhite;
+    }
+}
+
+#about {
+    background-color: $med-gray;
+    min-height: $container-min-height;
+    #about-title {
+        color: $lt-taupe;
+    }
+    #about-title::after {
+        background-color: $lt-taupe; 
+        @include title-after();
+    }
+}
+
+#skills {
+    background-color: $dark-violet;
+    min-height: $container-min-height;
+    #skills-title {
+        color: $lt-taupe;
+    }
+    #skills-title::after {
+        background-color: $lt-taupe; 
+        @include title-after();
+    }
+    #skills-list {
+        dt {
+            //margin-bottom: .25rem;
+            font-family: $font-helvetica;
+            font-size: $font-size*1.1;
+        }
+        dd {
+            margin-bottom: 1.25rem;
+        }
+    }
+}
+
+#experience {
+    background-color: $font-color-caramel;
+    min-height: $container-min-height;
+    #experience-title {
+        color: $lt-taupe;
+    }
+    #experience-title::after {
+        background-color: $lt-taupe; 
+        @include title-after();
+    }
+}
+
+#interests {
+    background-color: $med-yell-green;
+    min-height: $container-min-height;
+    #interests-title {
+        color: $lt-taupe;
+    }
+    #interests-title::after {
+        background-color: $lt-taupe; 
+        @include title-after();
+    }
+}
+
+#photo {
+    background-image: url('../_img/hero_img_2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: $very-lt-gray;
+}
+
+#contact {
+    background-color: $very-dark-taupe;
+    min-height: $container-min-height*1.5;
+    color: $lt-taupe;
+    #contact-title::after {
+        background-color: $lt-taupe; 
+        @include title-after();
+    }
+}
+
+#footer {
+    background-color: $font-color-pecan;
+    min-height: $container-min-height*0.5    ;
+    color: $font-color-light;
+    #contact-title::after {
+        background-color: $lt-taupe; 
+        @include title-after();
+    }
+    a {
+        color: $font-color-floralwhite;
+    }
+}
+
+a#toTop { 
+    position: fixed;
+    z-index: 1000;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-radius: 50%;
+    background-color: $very-lt-taupe;
+    opacity: .75;
+    display: block;
+    font-size: $font-size;
+    line-height: $font-size;
+    text-align: justify;
+    width: 3.6rem;
+    height: 3.6rem;
+    transition: background-color .3s;
+    color: $font-color-pecan;
+    text-decoration: none;
+    i {
+        display: block;
+        width: 100%;
+        height: 100%; text-align: center;
+        line-height: 3rem;
+        opacity: .25;
+    }
+}
+a#toTop:hover i {
+        opacity: .75;
+    }
+
+/*
+@include media-breakpoint-up(xs) { 
+    
+ }
+
+@include media-breakpoint-up(sm) { 
+    
+ }
+
+@include media-breakpoint-up(md) { 
+    
+ }
+
+@include media-breakpoint-up(lg) { 
+    
+ }
+
+@include media-breakpoint-up(xl) { 
+    
+ }
+ 
+ */
+
+ /* Extra small devices (portrait phones, more than 360px) */
+ @media (min-width: 360px) { 
+    .container { width: 300px; height: 100%; }
+    #header {
+        min-height: $container-min-height;
+        #name {
+            margin-top: 2rem;
+            font-size: $font-size*3;
+        }
+        #job-title {
+            font-size: $font-size;
+        }
+    }
+
+    body {
+        h1 {
+            font-size: $font-size*5.376;
+        }
+        h2 {
+            font-size: $font-size*3.36;
+        }
+        h3{
+            font-size: $font-size*2.1;
+        }
+        h4{
+            font-size: $font-size*1.3125;
+        }
+        h5{
+            font-size: $font-size*0.82;
+        }
+    }
+ }
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .container { width: 540px; height: 100%; }
+    #header {
+        min-height: $container-min-height*1.5;
+        #name {
+            margin-top: 2rem;
+            font-size: $font-size*4;
+        }
+        #job-title {
+            font-size: $font-size*1.2;
+        }
+    }
+
+    body {
+        h1 {
+            font-size: $font-size*6.55;
+        }
+        h2 {
+            font-size: $font-size*4.1;
+        }
+        h3{
+            font-size: $font-size*2.56;
+        }
+        h4{
+            font-size: $font-size*1.6;
+        }
+        h5{
+            font-size: $font-size*1;
+        }
+    }
+ }
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container { width: 720px; height: 100%; }
+    #header {
+        min-height: $container-min-height*2;
+        #name {
+            margin-top: 3rem;
+            font-size: $font-size*5;
+        }
+        #job-title {
+            font-size: $font-size*1.5;
+        }
+    }
+    
+ }
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container { width: 960px; height: 100%; }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container { width: 1140px; height: 100%; }
+ }
+

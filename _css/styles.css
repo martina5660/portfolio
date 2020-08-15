@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&family=Architects+Daughter&EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("../node_modules/bootstrap/scss/mixins/_breakpoints.scss");
+* {
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+html {
+  min-height: 100%; }
+
+body {
+  z-index: 0;
+  font-size: 20px;
+  background-color: #FFFBE6;
+  color: #fffaf0;
+  font-size: 20px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    display: block;
+    position: relative; }
+  body h1 {
+    font-family: "EB Garamond", serif;
+    font-size: 131px;
+    line-height: 1.2;
+    font-weight: 700; }
+  body h2 {
+    font-family: "Mulish", sans-serif;
+    font-size: 82px; }
+  body h3 {
+    font-family: "EB Garamond", serif;
+    font-size: 51.2px; }
+  body h4 {
+    font-family: "Lato", sans-serif;
+    font-size: 32px; }
+  body h5 {
+    font-family: "EB Garamond", serif;
+    font-size: 20px; }
+  body p {
+    font-size: 22.5px;
+    line-height: 32px;
+    margin-bottom: 30px; }
+  body a {
+    cursor: pointer;
+    color: inherit; }
+
+.jumbotron {
+  margin: 0px auto;
+  border-radius: 0; }
+
+#header {
+  background-image: url("../_img/header-v2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  min-height: 30rem; }
+  #header #name {
+    margin-top: 3rem;
+    font-family: "Architects Daughter", cursive;
+    font-weight: 700;
+    background-color: rgba(255, 251, 230, 0.75);
+    font-size: 100px;
+    letter-spacing: .1em;
+    color: #48260D; }
+  #header #job-title {
+    margin-top: 0rem;
+    font-family: "Arvo", serif;
+    background-color: #7B7F15;
+    font-size: 30px;
+    line-height: 44px;
+    color: #fffaf0; }
+
+#about {
+  background-color: #C1C7D4;
+  min-height: 15rem; }
+  #about #about-title {
+    color: #FFF9DD; }
+  #about #about-title::after {
+    background-color: #FFF9DD;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 6.25rem;
+    opacity: 0.35; }
+
+#skills {
+  background-color: #85788C;
+  min-height: 15rem; }
+  #skills #skills-title {
+    color: #FFF9DD; }
+  #skills #skills-title::after {
+    background-color: #FFF9DD;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 6.25rem;
+    opacity: 0.35; }
+  #skills #skills-list dt {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px; }
+  #skills #skills-list dd {
+    margin-bottom: 1.25rem; }
+
+#experience {
+  background-color: #997950;
+  min-height: 15rem; }
+  #experience #experience-title {
+    color: #FFF9DD; }
+  #experience #experience-title::after {
+    background-color: #FFF9DD;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 6.25rem;
+    opacity: 0.35; }
+
+#interests {
+  background-color: #b3bd64;
+  min-height: 15rem; }
+  #interests #interests-title {
+    color: #FFF9DD; }
+  #interests #interests-title::after {
+    background-color: #FFF9DD;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 6.25rem;
+    opacity: 0.35; }
+
+#photo {
+  background-image: url("../_img/hero_img_2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #E7EEFE; }
+
+#contact {
+  background-color: #9B9887;
+  min-height: 22.5rem;
+  color: #FFF9DD; }
+  #contact #contact-title::after {
+    background-color: #FFF9DD;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 6.25rem;
+    opacity: 0.35; }
+
+#footer {
+  background-color: #48260D;
+  min-height: 7.5rem;
+  color: #f2f2f2; }
+  #footer #contact-title::after {
+    background-color: #FFF9DD;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 6.25rem;
+    opacity: 0.35; }
+  #footer a {
+    color: #fffaf0; }
+
+a#toTop {
+  position: fixed;
+  z-index: 1000;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  border-radius: 50%;
+  background-color: #FFFBE6;
+  opacity: .75;
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: justify;
+  width: 3.6rem;
+  height: 3.6rem;
+  transition: background-color .3s;
+  color: #48260D;
+  text-decoration: none; }
+  a#toTop i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 3rem;
+    opacity: .25; }
+
+a#toTop:hover i {
+  opacity: .75; }
+
+/*
+@include media-breakpoint-up(xs) { 
+    
+ }
+
+@include media-breakpoint-up(sm) { 
+    
+ }
+
+@include media-breakpoint-up(md) { 
+    
+ }
+
+@include media-breakpoint-up(lg) { 
+    
+ }
+
+@include media-breakpoint-up(xl) { 
+    
+ }
+ 
+ */
+/* Extra small devices (portrait phones, more than 360px) */
+@media (min-width: 360px) {
+  .container {
+    width: 300px;
+    height: 100%; }
+  #header {
+    min-height: 15rem; }
+    #header #name {
+      margin-top: 2rem;
+      font-size: 60px; }
+    #header #job-title {
+      font-size: 20px; }
+  body h1 {
+    font-size: 107.52px; }
+  body h2 {
+    font-size: 67.2px; }
+  body h3 {
+    font-size: 42px; }
+  body h4 {
+    font-size: 26.25px; }
+  body h5 {
+    font-size: 16.4px; } }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    height: 100%; }
+  #header {
+    min-height: 22.5rem; }
+    #header #name {
+      margin-top: 2rem;
+      font-size: 80px; }
+    #header #job-title {
+      font-size: 24px; }
+  body h1 {
+    font-size: 131px; }
+  body h2 {
+    font-size: 82px; }
+  body h3 {
+    font-size: 51.2px; }
+  body h4 {
+    font-size: 32px; }
+  body h5 {
+    font-size: 20px; } }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    height: 100%; }
+  #header {
+    min-height: 30rem; }
+    #header #name {
+      margin-top: 3rem;
+      font-size: 100px; }
+    #header #job-title {
+      font-size: 30px; } }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    height: 100%; } }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    height: 100%; } }
