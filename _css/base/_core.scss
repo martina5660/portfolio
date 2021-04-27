@@ -1,0 +1,113 @@
+html {
+    font-size: 16px;
+}
+
+
+h1 {
+    color: $header-color-dark;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3.2rem;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 66%;
+    text-align: left;
+}
+
+.btn {
+    @include m-x-2;
+    @include m-y-2;
+    background-color: $text-font-color;
+    color: seashell;
+}
+
+.btn-blue {
+    @extend .btn;
+    background-color: $link-hover-font-color;
+}
+
+.card {
+    margin: 3.25rem 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    border: .125rem solid #fff;
+    @include border-radius(1.5rem);
+    background: rgba($color: #fff, $alpha: .25);
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: royalblue;
+        color: #fff;
+        font-size: 1.75rem;
+        font-weight: 600;
+        padding: 1rem 0;
+    }
+
+    .card-body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .card-body-item {
+            flex: 1 1 300px;
+        }
+
+        .card-img {
+            margin: .5rem;
+            height: 20vh;
+            // width: 40%;
+            background-color: salmon;
+
+            img {
+                min-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                vertical-align: baseline;
+                @include grey-filter-100;
+                &:hover {
+                    @include grey-filter-0;
+                }
+            }
+        }
+
+        .card-info {
+            display: flex;
+            flex-flow: column;
+            margin: .5rem;
+            width: 50%;
+
+            .name {
+                flex-grow: 2;
+                margin: .5rem 0;
+                font-weight: 600;
+                font-size: 1.75rem;
+            }
+
+            .email,
+            .phone {
+                flex-grow: 2;
+                margin: .25rem 0;
+                font-weight: 400;
+                font-size: 1.25rem;
+
+            }
+        }
+    }
+
+    .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f8f8;
+        border-top: .125rem solid #d9d9d9;
+        padding: 1rem 0;
+    }
+}

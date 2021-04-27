@@ -1,0 +1,91 @@
+Essentials:
+
+git --version
+git config --global user.name
+git config --global user.email
+cat ~/.gitconfig
+
+Create SSH key: ssh-keygen -o
+The key is put here: c/User/marti/.ssh/id_rsa
+Get SSH key: cat ~/.ssh/id_rsa.pub
+Copy/paste this key to GitHub => account => settings => SSH Keys
+
+
+diff -u file_broken file_fixed => puts on screen
+diff -u file_broken file_fixed > file.diff => create a file with differences
+cat file.diff
+patch file_broken < file.diff => patches a broken file with a diff file
+
+rm filename => remove a file
+mkdir => create a dir
+
+
+
+Initialize a new repository / add file / commit file / log of changes
+git init
+git status
+git add .
+git add <filename>
+git commit -m "Message about the commit"
+
+git log --graph
+git log --oneline
+
+
+**Clone existing repo from GitHub**
+git clone <repo-url>
+git log => to see all upates/changes
+
+
+**Push existing repository to remote location**
+git remote add origin -u <address>
+git push -u origin master [git push(command) origin(the name of a remote repo) master(the name of a remote reo
+
+Info of the remote repository fetch/push
+git remote -v
+
+
+**Git pull**
+git pull -> git fetch + git merge
+git fetch -> downloads history of changes
+git merge -> merges branches
+
+
+
+**Git flow**
+- we have unstaged work (new or updated files)
+- we stage our work (adding all changes to be committed)
+- we commit our work (adding changes to git repo)
+- finally we push our work (git push -u origin master)
+
+
+**Git reset / restore**
+git reset HEAD [file or folder] => unstage an accidentally deleted file
+git restore <filename> => restore an accidentally deleted file
+git checkout -- <filename> => restores the deleted file as well
+
+
+**Useful Commands**
+git log --oneline --graph --decorate --all
+
+git reset HEAD [file or folder]
+git reset --hard [tag/branch/id] -> forcibly reset all to last commit
+git commit -S 	-> commit & signed with GPG (gnupg)
+git stash save	-> save all changes in working + index
+git stash pop	-> restore changes
+git stash list	-> git statuslist all stashes you've saved
+
+
+**Branching**|
+`git branch` | list branches, * -> current branch
+`git branch bugfix49` | create branch named **bugfix49** at current commit
+`git branch bugfix49 893cbb8` | create branch named **bugfix49** at commit **893cbb8**
+`git branch bugfix49 master` | create branch named **bugfix49** at commit **master**
+`git branch -d bugfix49` | delete branch **bugfix49**
+
+
+
+
+
+
+

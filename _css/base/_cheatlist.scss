@@ -1,0 +1,114 @@
+
+// vars
+$font-color: #494949;
+$font-size: 1.5rem;
+
+
+
+// mixins
+@mixin p-xy-1 {
+    padding: 1rem;
+}
+
+@mixin p-x-1 {
+    padding: 0 1rem;
+}
+
+@mixin p-y-1 {
+    padding: 1rem 0;
+}
+
+@mixin radius($val){
+    border-radius: $val;
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+}
+
+
+// function
+@function addition($first, $second){
+    @return $first + $second;
+}
+
+
+
+// clear styles
+div {
+    display: flex;
+    flex-flow: row-reverse;
+    flex-wrap: wrap;
+
+    a {
+        display: block;
+        place-self: center; // sets both, align-self & justify-self
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:visited {
+            color: seashell;
+            background-color: darken(seashell, 50%);
+        }
+    }
+}
+
+/*  Equivalent to 
+div {
+    display: flex;
+    flex-flow: row-reverse;
+    flex-wrap: wrap;
+}
+
+div a {
+        display: block;
+        align-self: center;
+        justify-self: center;
+        text-decoration: none;
+}
+
+div a:hover,
+div a:active,
+div a:visited {
+    color: seashell;
+    background_color: #898989;
+}
+*/
+
+
+.btn { 
+    display: block;
+    width: 5rem;
+    height: 1.75rem;
+    background-color: #888888;
+    border: .0625rem solid #565656;
+}
+
+.btn-blue {
+    @extend .btn;
+    background-color: #a68ff8;
+    border: .0625rem solid #6e05f7;
+    padding: addition(8px, 12px);
+
+}
+
+/*  Equivalent to 
+.btn, .btn-blue { 
+    display: block;
+    width: 5rem;
+    height: 1.75rem;
+    background-color: #888888;
+    border: .0625rem solid #565656;
+}
+
+.btn-blue {
+    background-color: #a68ff8;
+    border: .0625rem solid #6e05f7;
+    padding: 20px;
+}
+*/
+
+
+
+
+

@@ -1,8 +1,6 @@
 // Google fonts -> OpenSans, Open Sans Condenced, Lato, Raleway, Arno & Crimmson Pro
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&family=Architects+Daughter&EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@import url('../node_modules/bootstrap/scss/mixins/_breakpoints.scss');
-
 
 // Colors
 $very-lt-taupe: #FFFBE6;
@@ -40,6 +38,12 @@ $dark-purple: #401155;
 $very-dark-purple: #280339;
 
 
+$very-lt-fuchsia: #f7aee4;
+$lt-fuchsia: #f891dd;
+$med-fuchsia: #f768d1;
+$dark-fuchsia: #bd2a96;
+$very-dark-fuchsia: #9b1577;
+
 
 // Fonts
 $font-color-dark: #3B270C;
@@ -70,9 +74,9 @@ $font-size: 20px;
     bottom: 0;
     content: '';
     display: block;
-    height: 2px;
-    left: 0;
+    height: .175rem;
     position: absolute;
+    left: .85rem;
     width: 6.25rem;
     opacity: 0.35;
 }
@@ -80,6 +84,9 @@ $font-size: 20px;
 
 // Heights
 $container-min-height: 15rem;
+.row {
+    overflow: hidden;
+}
 
 * {
     margin: 0;
@@ -89,60 +96,73 @@ $container-min-height: 15rem;
 
 html {
     min-height: 100%;
- }
+    font-size: $font-size;
+}
 
 body {
     z-index: 0;
-    font-size: $font-size;
     background-color: $very-lt-taupe;
     color: $font-color-floralwhite;
-    font-size:  $font-size;
     font-family: $font-mulish;
     font-weight: 300;
-
-    h1, h2, h3, h4, h5, h6 {
-        display: block;
-        position: relative;
-    }
-    h1 {
-        font-family: $font-eb-garamond;
-        font-size: $font-size*6.55;
-        line-height: 1.2;
-        font-weight: 700;
-    }
-    h2 {
-        font-family: $font-mulish;
-        font-size: $font-size*4.1;
-    }
-    h3{
-        font-family: $font-eb-garamond;
-        font-size: $font-size*2.56;
-    }
-    h4{
-        font-family: $font-lato;
-        font-size: $font-size*1.6;
-    }
-    h5{
-        font-family: $font-eb-garamond;
-        font-size: $font-size*1;
-    }
-    p{
-        font-size: $font-size*1.125;
-        line-height: $font-size*1.6;
-        margin-bottom: $font-size*1.5;
-    }
-    a {
-        cursor: pointer;
-        color: inherit;
-    }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    position: relative;
+    margin: 0;
+}
+
+h1 {
+    font-family: $font-eb-garamond;
+    font-size: 6.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: $font-mulish;
+    font-size: 4.1rem;
+}
+
+h3{
+    font-family: $font-eb-garamond;
+    font-size: 2.56rem;
+}
+
+h4{
+    font-family: $font-lato;
+    font-size: 1.6rem;
+}
+
+h5{
+    font-family: $font-eb-garamond;
+    font-size: 1rem;
+}
+
+p{
+    font-size: 1.4rem;
+    line-height: 1.85rem;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+section {
+    padding: 4.5rem 0;
+}
 
 .jumbotron {
     margin: 0px auto; 
     border-radius: 0;
 }
 
+.container {
+    width: 66%;
+}
 
 
 #header {
@@ -151,34 +171,33 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;
-    min-height: $container-min-height*2;
-    #name {
+    .title {
         margin-top: 3rem;
-        //padding: 1rem 0rem;
         font-family: $font-architects-daught;
         font-weight: 700;
         background-color: rgba(255, 251, 230, 0.75);
-        font-size: $font-size*5;
+        font-size: 5rem;
         letter-spacing: .1em;
         color: $font-color-pecan;
     }
-    #job-title {
-        margin-top: 0rem;
+    .subtitle {
+        margin-bottom: 3rem;
         font-family: $font-arvo;
         background-color: $dark-yell-green;
-        font-size: $font-size*1.5;
-        line-height: $font-size*2.2;
-        color: $font-color-floralwhite;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        // color: $font-color-floralwhite;
+        color: $lt-fuchsia;
     }
 }
 
 #about {
     background-color: $med-gray;
     min-height: $container-min-height;
-    #about-title {
+    .title {
         color: $lt-taupe;
     }
-    #about-title::after {
+    .title::after {
         background-color: $lt-taupe; 
         @include title-after();
     }
@@ -187,21 +206,31 @@ body {
 #skills {
     background-color: $dark-violet;
     min-height: $container-min-height;
-    #skills-title {
+    .title {
         color: $lt-taupe;
     }
-    #skills-title::after {
+    .title::after {
         background-color: $lt-taupe; 
         @include title-after();
     }
-    #skills-list {
-        dt {
-            //margin-bottom: .25rem;
-            font-family: $font-helvetica;
-            font-size: $font-size*1.1;
-        }
-        dd {
-            margin-bottom: 1.25rem;
+    .skills {
+        .item {
+            .name {
+                display: block;
+                width: 100%;
+                font-family: $font-mulish;
+                font-weight: 600;
+                font-size: 1.75rem;
+                color: $very-lt-fuchsia;
+            }
+            .info {
+                display: block;
+                width: 100%;
+                font-size: 1.125rem;
+                line-height: 1.85rem;
+    
+            }
+
         }
     }
 }
@@ -209,10 +238,10 @@ body {
 #experience {
     background-color: $font-color-caramel;
     min-height: $container-min-height;
-    #experience-title {
+    .title {
         color: $lt-taupe;
     }
-    #experience-title::after {
+    .title::after {
         background-color: $lt-taupe; 
         @include title-after();
     }
@@ -221,31 +250,49 @@ body {
 #interests {
     background-color: $med-yell-green;
     min-height: $container-min-height;
-    #interests-title {
+    .title {
         color: $lt-taupe;
     }
-    #interests-title::after {
+    .title::after {
         background-color: $lt-taupe; 
         @include title-after();
     }
+    .interests {
+        .item {
+            width: 100%;
+            font-size: 1.4rem;
+            line-height: 1.85rem;
+        }
+    }
+
 }
 
-#photo {
-    background-image: url('../_img/hero_img_2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-color: $very-lt-gray;
-}
+#me { 
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+} 
+
 
 #contact {
     background-color: $very-dark-taupe;
     min-height: $container-min-height*1.5;
     color: $lt-taupe;
-    #contact-title::after {
+    .title::after {
         background-color: $lt-taupe; 
         @include title-after();
+    }
+    .form-control {
+        border: 0.15rem solid $med-taupe;
+    }
+    .form-control.is-invalid, .was-validated .form-control:invalid {
+        border-color: $med-fuchsia;
+        border-width: .15rem;
+        color: $med-fuchsia;
+    }
+    .invalid-feedback {
+        font-size: 1rem;
+        color: $very-lt-fuchsia;
     }
 }
 
@@ -253,146 +300,99 @@ body {
     background-color: $font-color-pecan;
     min-height: $container-min-height*0.5    ;
     color: $font-color-light;
-    #contact-title::after {
-        background-color: $lt-taupe; 
-        @include title-after();
-    }
     a {
         color: $font-color-floralwhite;
     }
 }
 
-a#toTop { 
+.btn-up {
     position: fixed;
     z-index: 1000;
     bottom: 1.5rem;
     right: 1.5rem;
     border-radius: 50%;
-    background-color: $very-lt-taupe;
-    opacity: .75;
-    display: block;
-    font-size: $font-size;
-    line-height: $font-size;
-    text-align: justify;
+    background-color: rgba($color: $lt-taupe, $alpha: .5);
     width: 3.6rem;
     height: 3.6rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50% 50%;
     transition: background-color .3s;
-    color: $font-color-pecan;
-    text-decoration: none;
-    i {
-        display: block;
-        width: 100%;
-        height: 100%; text-align: center;
-        line-height: 3rem;
-        opacity: .25;
-    }
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3e%3c/svg%3e");
 }
-a#toTop:hover i {
-        opacity: .75;
-    }
 
-/*
-@include media-breakpoint-up(xs) { 
-    
- }
+.btn-up:hover,
+.btn-up:focus {
+    background-color: rgba($color: $lt-fuchsia, $alpha: .5);
+}
 
-@include media-breakpoint-up(sm) { 
-    
- }
 
-@include media-breakpoint-up(md) { 
-    
- }
 
-@include media-breakpoint-up(lg) { 
-    
- }
 
-@include media-breakpoint-up(xl) { 
-    
- }
- 
- */
+
+
 
  /* Extra small devices (portrait phones, more than 360px) */
- @media (min-width: 360px) { 
-    .container { width: 300px; height: 100%; }
+ @media (max-width: 559px) { 
+    html {
+        font-size: 12px;
+    }
+        
     #header {
-        min-height: $container-min-height;
-        #name {
-            margin-top: 2rem;
-            font-size: $font-size*3;
+        .title {
+            font-size: 4rem;
         }
-        #job-title {
-            font-size: $font-size;
+        .subtitle {
+            font-size: 1.5rem;
         }
     }
 
-    body {
-        h1 {
-            font-size: $font-size*5.376;
-        }
-        h2 {
-            font-size: $font-size*3.36;
-        }
-        h3{
-            font-size: $font-size*2.1;
-        }
-        h4{
-            font-size: $font-size*1.3125;
-        }
-        h5{
-            font-size: $font-size*0.82;
-        }
+    .container {
+        width: 85%;
     }
+
  }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-    .container { width: 540px; height: 100%; }
+/* Small devices (landscape phones, 768px and up) */
+@media (min-width: 560px) and (max-width: 767px) { 
+    html {
+        font-size: 14px;
+    }
+        
     #header {
-        min-height: $container-min-height*1.5;
-        #name {
-            margin-top: 2rem;
-            font-size: $font-size*4;
+        .title {
+            font-size: 4.5rem;
         }
-        #job-title {
-            font-size: $font-size*1.2;
+        .subtitle {
+            font-size: 1.65rem;
         }
     }
 
-    body {
-        h1 {
-            font-size: $font-size*6.55;
-        }
-        h2 {
-            font-size: $font-size*4.1;
-        }
-        h3{
-            font-size: $font-size*2.56;
-        }
-        h4{
-            font-size: $font-size*1.6;
-        }
-        h5{
-            font-size: $font-size*1;
-        }
+    .container {
+        width: 80%;
     }
- }
+
+}
 
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    .container { width: 720px; height: 100%; }
+@media (min-width: 768px) and (max-width: 991px) { 
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 75%;
+    }
+
     #header {
-        min-height: $container-min-height*2;
-        #name {
+        .title {
             margin-top: 3rem;
-            font-size: $font-size*5;
+            font-size: 5rem;
         }
-        #job-title {
-            font-size: $font-size*1.5;
+        .subtitle {
+            font-size: 1.5rem;
         }
     }
     
@@ -400,12 +400,20 @@ a#toTop:hover i {
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-    .container { width: 960px; height: 100%; }
- }
+@media (min-width: 992px) and (max-width: 1199px){ 
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 75%;
+    }
+
+}
+
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-    .container { width: 1140px; height: 100%; }
- }
+@media (min-width: 1200px){ 
+
+}
 
